@@ -1,0 +1,76 @@
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* GALLERY */
+.gallery {
+  background: #e0568a;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: 0.4s;
+}
+
+/* HOVER EFFECT (Canva-like zoom) */
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* CONTACT */
+.contact {
+  background: #d9d2c7;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact h2 {
+  color: #e0568a;
+  font-size: 2.5rem;
+}
+
+.contact-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #e0568a;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+/* ✨ SCROLL ANIMATIONS */
+.section, .about, .skills, .gallery, .contact {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
